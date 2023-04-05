@@ -1,0 +1,23 @@
+{
+  "name": "design-token",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "tt:global": "npx token-transformer tokens.json ./tokens/global.json global",
+    "sd": "style-dictionary build --config ./sd.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixio0330/design-token.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ixio0330/design-token/issues"
+  },
+  "homepage": "https://github.com/ixio0330/design-token#readme",
+  "devDependencies": {
+    "style-dictionary": "^3.7.2"
+  }
+}
