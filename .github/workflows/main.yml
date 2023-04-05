@@ -27,7 +27,7 @@ jobs:
             git config --global user.email "ixio0330@gmail.com"
             git add .
             git commit -m "💄 Update Styles"
-            git push
+            git push https://${secrets.ACCESS_TOKEN}@github.com/user/design-token.git HEAD:${{ github.ref }}
       - name: Create Pull Request
         run: gh pr create -B main -H design --title '💄 Update Design Token' --body 'Design Token 변경에 따른 token transform와 style dictionary을 이용한 파일 변환' --reviewer ixio0330
         env:
