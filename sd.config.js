@@ -1,3 +1,7 @@
+// Temp
+const tokenJson = require(`./tokens/${process.env.TARGET}.json`);
+console.log(tokenJson);
+
 const tokenOrigin = require('./tokens.json');
 const tokenList = [];
 
