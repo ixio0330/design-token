@@ -15,6 +15,7 @@ jobs:
           node-version: 16
       - run: npm install
       - run: |
+          npm install -g token-transformer
           npm run tt:global
           npm run tt:light
           npm run sd:global
