@@ -10,14 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 'stable'
-      - name: Install dependencies
-        run: npm install
-      - name: Run scripts
-        run: |
+          node-version: 16
+      - run: npm install
+      - run: |
           npm run tt:global
           npm run tt:light
           npm run sd:global
