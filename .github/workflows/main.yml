@@ -10,7 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'stable'
+      - name: Install dependencies
+        run: npm install
+      - name: Run scripts
+        run: |
+          npm run tt:global
+          npm run tt:light
+          npm run sd:global
+          npm run sd:light
       - name: Create Pull Request
-        run: gh pr create -B main -H design --title '🧪 Github action test' --body 'Created by Github action' --reviewer ixio0330
+        run: gh pr create -B main -H design --title '💄 Update Design Token' --body 'Design Token 변경에 따른 token transform와 style dictionary을 이용한 파일 변환' --reviewer ixio0330
         env:
             GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
