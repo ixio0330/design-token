@@ -1,59 +1,21 @@
+const tokenOrigin = require('./tokens.json');
+const tokenList = [];
+
+for (const tokenKey in tokenOrigin[process.env.TARGET]) {
+  tokenList.push(tokenKey);
+}
+
 module.exports = {
-  source: ['tokens/*.json'],
+  source: [`tokens/${process.env.TARGET}.json`],
   platforms: {
     js: {
       transformGroup: 'js',
-      buildPath: 'src/styles/global/',
-      files: [
-        // sizing
-        {
-          destination: 'sizing.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'sizing' } },
-        },
-        // spacing
-        {
-          destination: 'spacing.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'spacing' } },
-        },
-        // borderRadius
-        {
-          destination: 'borderRadius.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'borderRadius' } },
-        },
-        // fontFamily
-        {
-          destination: 'fontFamily.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'fontFamily' } },
-        },
-        // fontWeight
-        {
-          destination: 'fontWeight.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'fontWeight' } },
-        },
-        // lineHeight
-        {
-          destination: 'lineHeight.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'lineHeight' } },
-        },
-        // fontSize
-        {
-          destination: 'fontSize.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'fontSize' } },
-        },
-        // typography
-        {
-          destination: 'typography.js',
-          format: 'javascript/module',
-          filter: { attributes: { category: 'typography' } },
-        },
-      ],
+      buildPath: `src/styles/${process.env.TARGET}/`,
+      files: tokenList.map((token) => ({
+        destination: `${token}.js`,
+        format: 'javascript/module',
+        filter: { attributes: { category: token } },
+      })),
     },
   },
 };
