@@ -13,13 +13,21 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
+      - name: Install node_modules
+        run: |
           npm install
           npm install -g token-transformer
           npm run tt:global
           npm run tt:light
           npm run sd:global
           npm run sd:light
+      - name: Commit files
+        run: |
+            git config --global user.name "ixio0330"
+            git config --global user.email "ixio0330@gmail.com"
+            git add .
+            git commit -m "💄 Update Styles"
+            git push
       - name: Create Pull Request
         run: gh pr create -B main -H design --title '💄 Update Design Token' --body 'Design Token 변경에 따른 token transform와 style dictionary을 이용한 파일 변환' --reviewer ixio0330
         env:
