@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tt:global": "npx token-transformer tokens.json ./tokens/global.json global",
-    "tt:light": "npx token-transformer tokens.json ./tokens/light.json light",
-    "sd:global": "cross-env TARGET=global style-dictionary build --config ./sd.config.js",
-    "sd:light": "cross-env TARGET=light style-dictionary build --config ./sd.config.js",
+    "tt:global": "npx token-transformer tokens.json ./src/tokens/global.json global"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
