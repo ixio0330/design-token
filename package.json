@@ -4,6 +4,8 @@
   "description": "",
   "scripts": {
     "tt:global": "npx token-transformer tokens.json ./src/tokens/global.json global",
+    "tt:light": "npx token-transformer tokens.json ./src/tokens/light.json light",
+    "tt:dark": "npx token-transformer tokens.json ./src/tokens/dark.json dark",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
