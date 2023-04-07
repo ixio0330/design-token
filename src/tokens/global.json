@@ -603,9 +603,5 @@
       "type": "typography",
       "failedToResolve": true
     }
-  },
-  "pink": {
-    "value": "pink",
-    "type": "color"
   }
 }
