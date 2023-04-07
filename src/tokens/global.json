@@ -604,8 +604,8 @@
       "failedToResolve": true
     }
   },
-  "orange": {
-    "value": "#ff8500",
+  "pink": {
+    "value": "pink",
     "type": "color"
   }
 }
