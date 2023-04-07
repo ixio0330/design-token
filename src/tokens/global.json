@@ -126,5 +126,19 @@
       "value": 700,
       "type": "fontWeights"
     }
+  },
+  "lineHeight": {
+    "130": {
+      "value": 130,
+      "type": "lineHeights"
+    },
+    "140": {
+      "value": 140,
+      "type": "lineHeights"
+    },
+    "150": {
+      "value": 150,
+      "type": "lineHeights"
+    }
   }
 }
