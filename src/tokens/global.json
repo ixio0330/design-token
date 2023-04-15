@@ -574,5 +574,9 @@
       "value": 10.4,
       "type": "fontSizes"
     }
+  },
+  "orange": {
+    "value": "orange",
+    "type": "color"
   }
 }
