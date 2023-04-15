@@ -603,9 +603,5 @@
       "type": "typography",
       "failedToResolve": true
     }
-  },
-  "orange": {
-    "value": "orange",
-    "type": "color"
   }
 }
